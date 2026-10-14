@@ -1,5 +1,11 @@
 $schema: 'https://moonrepo.dev/schemas/workspace.json'
 
+# moon compares changes against a branch called `master` unless told otherwise,
+# so `moon ci` fails on its very first step with `fatal: ambiguous argument
+# 'master'` before running a single task.
+vcs:
+  defaultBranch: 'main'
+
 projects:
   globs:
     - 'apps/*'

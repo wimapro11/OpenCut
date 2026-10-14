@@ -26,3 +26,5 @@ tasks:
       - '/Cargo.lock'
     outputs:
       - '/target/release/opencut-desktop'
+    options:
+      runInCI: false  # a release build implies `check`, and costs ~30 min per OS
